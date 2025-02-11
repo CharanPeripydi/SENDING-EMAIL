@@ -1,0 +1,19 @@
+Install dependencies:
+
+sudo apt update
+sudo apt install mailutils
+
+Update the email credentials in the send_email.py script (replace your_email@example.com and your_password with your actual email details).
+
+Set up the cron jobs to send emails at 9 AM and 5 PM:
+
+crontab -e
+
+Add these lines in the crontab file:
+
+# Send email at 9 AM Monday to Friday
+0 9 * * 1-5 /path/to/cron_script.sh  # Replace with your script path
+
+# Send email at 5 PM Monday to Friday
+0 17 * * 1-5 /path/to/cron_script.sh  # Replace with your script path
+
